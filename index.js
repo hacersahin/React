@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+import Baslik from './Baslik';
+import Backend from './Backend';
+import Frontend from './Frontend';
 import reportWebVitals from './reportWebVitals';
-import Futbol from './Futbol';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Futbol />
+    <Baslik ad="Hacer" soyad="Şahin"/>
+    <Frontend/>
+    <Backend/>
   </React.StrictMode>
 );
 
