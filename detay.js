@@ -9,6 +9,7 @@ function Detay(props){
         flexDirection: "column",
         justifyContent: "center",
         margin: "auto",
+        marginTop:"50px",
         padding: "50px",
         border: "1px solid black",
     };
