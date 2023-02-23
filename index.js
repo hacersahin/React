@@ -1,17 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
-import Baslik from './Baslik';
-import Backend from './Backend';
-import Frontend from './Frontend';
 import reportWebVitals from './reportWebVitals';
+import Menu from './menü';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Baslik ad="Hacer" soyad="Şahin"/>
-    <Frontend/>
-    <Backend/>
+    <Menu/>
+
   </React.StrictMode>
 );
 
