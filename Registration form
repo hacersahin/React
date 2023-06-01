@@ -19,14 +19,12 @@ function App() {
   const [role, setRole] = useState("role");
 
   const getIsFormValid = () => {
-   
-    if (password.isTouched && password.value.length < 8) {
-      return false;
-    }
-    if (!validateEmail(email)) {
-      return false;
-    }
-    return true;
+   return ( 
+      firstName && 
+      validateEmail(email) && 
+      password.value.length >= 8 && 
+      role !== "role" 
+    ); 
   };
 
   const clearForm = () => {
