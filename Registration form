@@ -19,7 +19,8 @@ function App() {
   const [role, setRole] = useState("role");
 
   const getIsFormValid = () => {
-   return ( 
+   
+    return ( 
       firstName && 
       validateEmail(email) && 
       password.value.length >= 8 && 
@@ -36,7 +37,8 @@ function App() {
     setRole("role");
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault(); 
     alert("Account created!");
     clearForm();
   };
@@ -84,8 +86,13 @@ function App() {
             <input
               placeholder="Password"
               id="password"
-              value={password}
-              onChange={(e)=> setPassword( e.target.value)}
+              value={password.value}
+              onChange={(e) => { 
+                setPassword({ ...password, value: e.target.value }); 
+              }} 
+              onBlur={() => { 
+                setPassword({ ...password, isTouched: true }); 
+              }} 
             />
              {password.isTouched && password.value.length < 8 && (
     <PasswordErrorMessage />
